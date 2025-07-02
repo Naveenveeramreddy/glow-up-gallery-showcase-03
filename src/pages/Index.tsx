@@ -30,6 +30,10 @@ const Index = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const openResume = () => {
+    window.open('https://drive.google.com/file/d/1d5xs7mtzIqpD9PLOR4ujN0hrdmfI0pVS/view?usp=sharing', '_blank');
+  };
+
   const skills = [
     {
       category: "Cloud Platform",
@@ -167,7 +171,12 @@ const Index = () => {
                   </Tooltip>
                 </TooltipProvider>
                 
-                <Button variant="outline" size="lg" className="btn-professional-outline group">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="btn-professional-outline group"
+                  onClick={openResume}
+                >
                   <Download className="w-4 h-4 mr-2" />
                   Download CV
                   <ExternalLink className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
