@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -213,19 +212,6 @@ const Index = () => {
                   Git, and Visual Studio Code. Passionate about creating efficient, secure, and user-centric 
                   cloud architectures.
                 </p>
-              </div>
-
-              {/* Achievement Stats */}
-              <div className="grid grid-cols-2 gap-6">
-                {achievements.map((achievement, index) => (
-                  <div key={index} className="text-center p-4 bg-card rounded-lg card-shadow hover-lift">
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                      <achievement.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="text-2xl font-bold text-primary mb-1">{achievement.number}</div>
-                    <div className="text-sm text-muted-foreground">{achievement.label}</div>
-                  </div>
-                ))}
               </div>
 
               <Button className="btn-primary w-full sm:w-auto">
