@@ -121,14 +121,14 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative section-professional overflow-hidden">
         <div className="container-professional">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start pt-8">
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-6">
                 <div className="text-center lg:text-left">
-                  <h1 className="heading-xl mb-2">
+                  <h1 className="heading-xl mb-4">
                     <span className="professional-gradient">Naveen Veeramreddy</span>
                   </h1>
-                  <h2 className="heading-lg text-muted-foreground mb-4">
+                  <h2 className="heading-lg text-muted-foreground mb-6">
                     Cloud & DevOps Engineer
                   </h2>
                   <p className="text-professional max-w-lg mx-auto lg:mx-0">
@@ -196,7 +196,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="relative flex justify-center lg:justify-end animate-slide-in-right">
+            <div className="relative flex justify-center lg:justify-end animate-slide-in-right lg:mt-8">
               <div className="relative">
                 <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 glass-professional animate-gentle-float" />
                 <div className="absolute inset-4 rounded-xl bg-card professional-card flex items-center justify-center">
