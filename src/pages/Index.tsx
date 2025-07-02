@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Cloud, Database, Server, Shield, Sparkles, Brain, Zap } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Cloud, Database, Server, Shield, Award, CheckCircle, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -76,205 +76,172 @@ const Index = () => {
     }
   ];
 
+  const achievements = [
+    "Cloud Architecture Design",
+    "Scalable Backend Systems",
+    "DevOps Implementation",
+    "Security Best Practices"
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Enhanced Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Professional Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Subtle Background Elements */}
         <div className="absolute inset-0">
-          {/* Neural Network Background */}
-          <div className="absolute inset-0 opacity-20">
-            <svg className="w-full h-full" viewBox="0 0 1000 1000">
-              <defs>
-                <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
-                  <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.6" />
-                  <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.4" />
-                </linearGradient>
-              </defs>
-              
-              {/* Animated Neural Network Lines */}
-              {Array.from({ length: 15 }).map((_, i) => (
-                <g key={i}>
-                  <line
-                    x1={Math.random() * 1000}
-                    y1={Math.random() * 1000}
-                    x2={Math.random() * 1000}
-                    y2={Math.random() * 1000}
-                    stroke="url(#neuralGradient)"
-                    strokeWidth="1"
-                    className="animate-pulse"
-                    style={{
-                      animationDelay: `${i * 0.2}s`,
-                      animationDuration: `${3 + Math.random() * 2}s`
-                    }}
-                  />
-                  <circle
-                    cx={Math.random() * 1000}
-                    cy={Math.random() * 1000}
-                    r="3"
-                    fill="url(#neuralGradient)"
-                    className="animate-ping"
-                    style={{
-                      animationDelay: `${i * 0.3}s`,
-                      animationDuration: `${2 + Math.random() * 1}s`
-                    }}
-                  />
-                </g>
-              ))}
-            </svg>
+          {/* Professional Grid Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="w-full h-full" style={{
+              backgroundImage: `
+                linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '50px 50px'
+            }} />
           </div>
 
-          {/* Floating Particles */}
-          <div className="absolute inset-0">
-            {Array.from({ length: 50 }).map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-1 h-1 bg-blue-400 rounded-full animate-float"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 5}s`,
-                  animationDuration: `${5 + Math.random() * 10}s`
-                }}
-              />
-            ))}
-          </div>
+          {/* Subtle Geometric Shapes */}
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-100/30 rounded-full blur-xl" />
+          <div className="absolute top-40 right-20 w-24 h-24 bg-indigo-100/40 rounded-lg rotate-45 blur-lg" />
+          <div className="absolute bottom-40 left-20 w-40 h-40 bg-slate-100/50 rounded-full blur-2xl" />
+          <div className="absolute bottom-20 right-10 w-28 h-28 bg-blue-200/30 rounded-lg rotate-12 blur-xl" />
 
-          {/* Gradient Orbs */}
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          {/* Professional Accent Lines */}
+          <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-blue-200/50 to-transparent" />
+          <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-indigo-200/50 to-transparent" />
         </div>
         
-        <div className="text-center z-10 max-w-5xl mx-auto relative">
-          {/* AI-Inspired Avatar */}
+        <div className="text-center z-10 max-w-6xl mx-auto relative">
+          {/* Professional Avatar */}
           <div className="relative mb-12">
-            <div className="w-40 h-40 mx-auto relative">
-              {/* Outer Ring with Rotation */}
-              <div className="absolute inset-0 rounded-full border-2 border-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 animate-spin-slow">
-                <div className="w-full h-full rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 backdrop-blur-sm" />
-              </div>
-              
-              {/* Middle Ring */}
-              <div className="absolute inset-2 rounded-full border border-blue-400/50 animate-pulse">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-slate-800/80 to-purple-900/80 backdrop-blur-md" />
-              </div>
-              
-              {/* Inner Avatar */}
-              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-4xl font-bold text-white shadow-2xl">
-                <div className="relative">
+            <div className="w-32 h-32 mx-auto relative">
+              {/* Clean Professional Ring */}
+              <div className="absolute inset-0 rounded-full border-3 border-blue-200 bg-white shadow-xl">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-3xl font-bold text-white">
                   NV
-                  <div className="absolute -top-1 -right-1">
-                    <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
-                  </div>
                 </div>
               </div>
               
-              {/* Floating Icons */}
-              <div className="absolute -top-2 -left-2 animate-bounce" style={{ animationDelay: '0s' }}>
-                <div className="w-8 h-8 bg-blue-500/80 rounded-full flex items-center justify-center backdrop-blur-sm">
-                  <Cloud className="w-4 h-4 text-white" />
+              {/* Professional Status Indicators */}
+              <div className="absolute -top-2 -right-2">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                  <CheckCircle className="w-4 h-4 text-white" />
                 </div>
               </div>
-              <div className="absolute -top-2 -right-2 animate-bounce" style={{ animationDelay: '0.5s' }}>
-                <div className="w-8 h-8 bg-purple-500/80 rounded-full flex items-center justify-center backdrop-blur-sm">
-                  <Brain className="w-4 h-4 text-white" />
+              
+              {/* Subtle Tech Icons */}
+              <div className="absolute -bottom-1 -left-1">
+                <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center shadow-md">
+                  <Cloud className="w-3 h-3 text-white" />
                 </div>
               </div>
-              <div className="absolute -bottom-2 -left-2 animate-bounce" style={{ animationDelay: '1s' }}>
-                <div className="w-8 h-8 bg-cyan-500/80 rounded-full flex items-center justify-center backdrop-blur-sm">
-                  <Code className="w-4 h-4 text-white" />
-                </div>
-              </div>
-              <div className="absolute -bottom-2 -right-2 animate-bounce" style={{ animationDelay: '1.5s' }}>
-                <div className="w-8 h-8 bg-green-500/80 rounded-full flex items-center justify-center backdrop-blur-sm">
-                  <Zap className="w-4 h-4 text-white" />
+              <div className="absolute -bottom-1 -right-1">
+                <div className="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center shadow-md">
+                  <Code className="w-3 h-3 text-white" />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Enhanced Typography */}
+          {/* Professional Typography */}
           <div className="space-y-6 mb-12">
             <div className="relative">
-              <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
-                Hi, I'm Naveen
+              <h1 className="text-5xl md:text-7xl font-bold mb-4 text-slate-800 tracking-tight">
+                Naveen Veeramreddy
               </h1>
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 blur-xl -z-10 animate-pulse" />
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full" />
             </div>
             
             <div className="relative">
-              <p className="text-2xl md:text-3xl mb-6 text-gray-300 font-medium">
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Cloud & Backend Developer
-                </span>
-                <span className="ml-2 inline-block animate-pulse">
-                  <Sparkles className="w-6 h-6 text-yellow-400" />
+              <p className="text-2xl md:text-3xl mb-6 text-slate-600 font-medium">
+                Cloud & Backend Developer
+                <span className="ml-2 inline-block">
+                  <Award className="w-6 h-6 text-blue-600" />
                 </span>
               </p>
             </div>
             
-            <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-400 backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
-              Self-motivated engineering student passionate about building 
-              <span className="text-blue-400 font-semibold"> scalable</span>, 
-              <span className="text-purple-400 font-semibold"> secure</span>, and 
-              <span className="text-cyan-400 font-semibold"> efficient</span> cloud architectures
-            </p>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl leading-relaxed text-slate-600 bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 shadow-lg">
+                Self-motivated engineering student with expertise in building 
+                <span className="text-blue-600 font-semibold"> scalable cloud architectures</span>, 
+                <span className="text-indigo-600 font-semibold"> secure backend systems</span>, and 
+                <span className="text-slate-700 font-semibold"> efficient DevOps solutions</span>
+              </p>
+            </div>
+
+            {/* Professional Achievements */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-8">
+              {achievements.map((achievement, index) => (
+                <div key={index} className="bg-white/90 backdrop-blur-sm rounded-lg p-4 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                    <span className="text-sm font-medium text-slate-700">{achievement}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Enhanced CTA Buttons */}
+          {/* Professional CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Button 
               size="lg" 
-              className="group relative bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 text-lg shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 border-0"
+              className="group bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 border-0 rounded-lg"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <span className="relative z-10 flex items-center gap-2">
-                View My Projects
-                <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <span className="flex items-center gap-2">
+                View Portfolio
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition-opacity" />
             </Button>
             
             <Button 
               variant="outline" 
               size="lg" 
-              className="group relative border-2 border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 hover:border-cyan-400 px-10 py-4 text-lg backdrop-blur-sm bg-white/5 transition-all duration-300 transform hover:scale-105"
+              className="group border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 px-10 py-4 text-lg bg-white/90 backdrop-blur-sm transition-all duration-300 rounded-lg"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <span className="flex items-center gap-2">
                 Get in Touch
-                <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </span>
             </Button>
           </div>
 
-          {/* Enhanced Social Links */}
-          <div className="flex justify-center gap-8">
+          {/* Professional Social Links */}
+          <div className="flex justify-center gap-6">
             <a 
               href="https://github.com/Naveenveeramreddy" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="group relative p-4 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-110"
+              className="group p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
             >
-              <Github className="w-8 h-8 text-gray-400 group-hover:text-blue-400 transition-colors" />
-              <div className="absolute inset-0 bg-blue-400/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity" />
+              <Github className="w-6 h-6 text-slate-600 group-hover:text-slate-800 transition-colors" />
             </a>
             <a 
               href="https://linkedin.com/in/naveen-veeramreddy" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="group relative p-4 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-110"
+              className="group p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
             >
-              <Linkedin className="w-8 h-8 text-gray-400 group-hover:text-blue-400 transition-colors" />
-              <div className="absolute inset-0 bg-blue-400/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity" />
+              <Linkedin className="w-6 h-6 text-slate-600 group-hover:text-blue-600 transition-colors" />
+            </a>
+            <a 
+              href="mailto:naveenveeramreddy181668@gmail.com" 
+              className="group p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300"
+            >
+              <Mail className="w-6 h-6 text-slate-600 group-hover:text-indigo-600 transition-colors" />
             </a>
           </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-gray-400/50 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-gradient-to-b from-blue-400 to-purple-400 rounded-full mt-2 animate-pulse" />
+          {/* Professional Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div className="flex flex-col items-center gap-2 text-slate-400">
+              <span className="text-sm font-medium">Scroll to explore</span>
+              <div className="w-6 h-10 border-2 border-slate-300 rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-bounce" />
+              </div>
             </div>
           </div>
         </div>
