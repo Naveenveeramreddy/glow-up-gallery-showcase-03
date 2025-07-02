@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Cloud, Database, Server, Shield, Zap, Users, Target, Award, TrendingUp, CheckCircle, ArrowRight, Menu, X } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Cloud, Database, Server, Shield, Zap, Users, Target, Award, TrendingUp, CheckCircle, ArrowRight, Menu, X, Settings, Monitor, Lock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -52,22 +52,46 @@ const Index = () => {
 
   const skills = [
     {
-      category: "Languages & Technologies",
-      items: ["Python", "SQL", "AWS"],
-      icon: Code,
+      category: "Cloud Platform",
+      description: "AWS",
+      items: ["AWS"],
+      icon: Cloud,
+      proficiency: 90
+    },
+    {
+      category: "Cloud Technologies",
+      description: "Core AWS Services",
+      items: ["EC2", "S3", "RDS", "Lambda", "CloudFront", "CloudWatch", "Route 53", "IAM", "Auto Scaling", "Load Balancer"],
+      icon: Server,
       proficiency: 88
     },
     {
-      category: "Tools",
-      items: ["Linux", "Visual Studio Code", "Git"],
-      icon: Database,
+      category: "DevOps Tools",
+      description: "CI/CD & Infrastructure",
+      items: ["Jenkins", "Terraform", "Docker", "Kubernetes", "Ansible", "Git", "GitHub"],
+      icon: Settings,
       proficiency: 85
     },
     {
-      category: "Soft Skills",
-      items: ["Teamwork", "Initiative", "Adaptability", "Continuous Learning"],
-      icon: Users,
-      proficiency: 92
+      category: "Programming",
+      description: "Development Languages",
+      items: ["Python"],
+      icon: Code,
+      proficiency: 90
+    },
+    {
+      category: "Operating Systems",
+      description: "System Administration",
+      items: ["Linux", "Windows"],
+      icon: Monitor,
+      proficiency: 87
+    },
+    {
+      category: "Security & Networking",
+      description: "Cloud Security & Network",
+      items: ["VPC", "WAF", "Security Groups", "IAM"],
+      icon: Shield,
+      proficiency: 85
     }
   ];
 
@@ -322,13 +346,13 @@ const Index = () => {
       <section id="skills" className="section-padding bg-card/30">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center mb-16">
-            <h2 className="heading-secondary mb-4">Skills & Tools</h2>
+            <h2 className="heading-secondary mb-4">Skills & Technologies</h2>
             <p className="text-xl text-muted-foreground">
-              Comprehensive skill set across languages, tools, and soft skills
+              My technical expertise across cloud platforms, DevOps, and development
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skillCategory, index) => (
               <Card key={index} className="card-shadow hover-glow bg-card/50 backdrop-blur-sm">
                 <CardHeader>
@@ -336,7 +360,10 @@ const Index = () => {
                     <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
                       <skillCategory.icon className="h-6 w-6 text-primary" />
                     </div>
-                    {skillCategory.category}
+                    <div>
+                      <div className="text-lg font-bold">{skillCategory.category}</div>
+                      <div className="text-sm text-muted-foreground">{skillCategory.description}</div>
+                    </div>
                   </CardTitle>
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
