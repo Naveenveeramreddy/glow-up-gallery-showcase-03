@@ -202,7 +202,7 @@ const Index = () => {
                 <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 glass-professional animate-gentle-float" />
                 <div className="absolute inset-4 rounded-xl bg-card professional-card flex items-center justify-center">
                   <Avatar className="w-40 h-40 animate-subtle-pulse">
-                    <AvatarImage src="/api/placeholder/400/400" alt="Naveen Veeramreddy" />
+                    <AvatarImage src="https://i.postimg.cc/0Q7c2xW5/IMG-20250702-WA0013-1.jpg" alt="Naveen Veeramreddy" />
                     <AvatarFallback className="text-4xl font-bold">NV</AvatarFallback>
                     <div className="status-indicator">
                       <div className="status-online" />
