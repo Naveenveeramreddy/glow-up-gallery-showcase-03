@@ -78,28 +78,28 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#121212] text-[#E0E0E0]">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#00AEEF]/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-indigo-200/20"></div>
         
         <div className="text-center z-10 max-w-4xl mx-auto">
-          <div className="w-32 h-32 bg-gradient-to-br from-[#00AEEF] to-[#0080CC] rounded-full mx-auto mb-8 flex items-center justify-center text-4xl font-bold">
+          <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full mx-auto mb-8 flex items-center justify-center text-4xl font-bold text-white shadow-lg">
             NV
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#E0E0E0] to-[#00AEEF] bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent">
             Hi, I'm Naveen
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-[#B0B0B0]">
+          <p className="text-xl md:text-2xl mb-8 text-gray-600 font-medium">
             Cloud & Backend Developer
           </p>
-          <p className="text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg mb-12 max-w-2xl mx-auto leading-relaxed text-gray-600">
             Self-motivated engineering student passionate about building scalable, secure, and efficient cloud architectures
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button 
               size="lg" 
-              className="bg-[#00AEEF] hover:bg-[#0080CC] text-white px-8 py-3 text-lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View My Projects
@@ -107,17 +107,17 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-[#00AEEF] text-[#00AEEF] hover:bg-[#00AEEF] hover:text-white px-8 py-3 text-lg"
+              className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg transition-all duration-300"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get in Touch
             </Button>
           </div>
           <div className="flex justify-center gap-6">
-            <a href="https://github.com/Naveenveeramreddy" target="_blank" rel="noopener noreferrer" className="text-[#E0E0E0] hover:text-[#00AEEF] transition-colors">
+            <a href="https://github.com/Naveenveeramreddy" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
               <Github size={32} />
             </a>
-            <a href="https://linkedin.com/in/naveen-veeramreddy" target="_blank" rel="noopener noreferrer" className="text-[#E0E0E0] hover:text-[#00AEEF] transition-colors">
+            <a href="https://linkedin.com/in/naveen-veeramreddy" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
               <Linkedin size={32} />
             </a>
           </div>
@@ -125,39 +125,39 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4">
+      <section id="about" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-[#00AEEF]">About Me</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-blue-600">About Me</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Veeramreddy Venkata Naveen</h3>
-              <p className="text-lg leading-relaxed mb-6">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Veeramreddy Venkata Naveen</h3>
+              <p className="text-lg leading-relaxed mb-6 text-gray-600">
                 Self-motivated engineering student with strong skills in Python, SQL, and cloud computing. 
                 Experienced in backend development and building scalable systems, with proficiency in Linux, 
                 Git, and Visual Studio Code. Passionate about creating efficient, secure, and user-centric 
                 cloud architectures.
               </p>
-              <Button className="bg-[#00AEEF] hover:bg-[#0080CC] text-white">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>
             </div>
             <div className="space-y-6">
-              <Card className="bg-[#1A1A1A] border-[#333333]">
+              <Card className="bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
-                  <CardTitle className="text-[#00AEEF]">Education</CardTitle>
+                  <CardTitle className="text-blue-600">Education</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold">B.Tech in Electronics and Communication</h4>
-                    <p className="text-[#B0B0B0]">Pragati Engineering College</p>
-                    <p className="text-[#B0B0B0]">CGPA: 7.8 (2021–2025)</p>
+                    <h4 className="font-semibold text-gray-800">B.Tech in Electronics and Communication</h4>
+                    <p className="text-gray-600">Pragati Engineering College</p>
+                    <p className="text-gray-600">CGPA: 7.8 (2021–2025)</p>
                   </div>
-                  <Separator className="bg-[#333333]" />
+                  <Separator className="bg-gray-200" />
                   <div>
-                    <h4 className="font-semibold">Intermediate</h4>
-                    <p className="text-[#B0B0B0]">FIITJEE</p>
-                    <p className="text-[#B0B0B0]">888/1000 (2019–2021)</p>
+                    <h4 className="font-semibold text-gray-800">Intermediate</h4>
+                    <p className="text-gray-600">FIITJEE</p>
+                    <p className="text-gray-600">888/1000 (2019–2021)</p>
                   </div>
                 </CardContent>
               </Card>
@@ -167,25 +167,25 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-[#0A0A0A]">
+      <section id="projects" className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-[#00AEEF]">Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-blue-600">Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="bg-[#1A1A1A] border-[#333333] hover:border-[#00AEEF] transition-all duration-300 hover:shadow-lg hover:shadow-[#00AEEF]/20">
+              <Card key={index} className="bg-white border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl">
                 <CardHeader>
-                  <CardTitle className="text-[#E0E0E0] flex items-center justify-between">
+                  <CardTitle className="text-gray-800 flex items-center justify-between">
                     {project.title}
-                    <ExternalLink className="h-5 w-5 text-[#00AEEF]" />
+                    <ExternalLink className="h-5 w-5 text-blue-600" />
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[#B0B0B0] mb-4 leading-relaxed">
+                  <CardDescription className="text-gray-600 mb-4 leading-relaxed">
                     {project.description}
                   </CardDescription>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="bg-[#00AEEF]/10 text-[#00AEEF] border-[#00AEEF]/20">
+                      <Badge key={techIndex} variant="secondary" className="bg-blue-100 text-blue-700 border-blue-200">
                         {tech}
                       </Badge>
                     ))}
@@ -198,16 +198,16 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4">
+      <section id="skills" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-8 text-[#00AEEF]">Skills & Technologies</h2>
-          <p className="text-center text-lg text-[#B0B0B0] mb-16">My technical expertise</p>
+          <h2 className="text-4xl font-bold text-center mb-8 text-blue-600">Skills & Technologies</h2>
+          <p className="text-center text-lg text-gray-600 mb-16">My technical expertise</p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category, index) => (
-              <Card key={index} className="bg-[#1A1A1A] border-[#333333] hover:border-[#00AEEF] transition-all duration-300">
+              <Card key={index} className="bg-white border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl">
                 <CardHeader>
-                  <CardTitle className="text-[#00AEEF] flex items-center gap-3">
+                  <CardTitle className="text-blue-600 flex items-center gap-3">
                     <category.icon className="h-6 w-6" />
                     {category.title}
                   </CardTitle>
@@ -218,7 +218,7 @@ const Index = () => {
                       <Badge 
                         key={skillIndex} 
                         variant="outline" 
-                        className="border-[#00AEEF]/30 text-[#E0E0E0] hover:bg-[#00AEEF]/10 transition-colors"
+                        className="border-blue-200 text-gray-700 hover:bg-blue-50 transition-colors"
                       >
                         {skill}
                       </Badge>
@@ -230,11 +230,11 @@ const Index = () => {
           </div>
 
           <div className="mt-12">
-            <h3 className="text-2xl font-semibold mb-6 text-center">Soft Skills</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-center text-gray-800">Soft Skills</h3>
             <div className="flex justify-center">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl">
                 {["Teamwork", "Initiative", "Adaptability", "Willingness to Learn"].map((skill, index) => (
-                  <Badge key={index} variant="outline" className="border-[#00AEEF] text-[#00AEEF] p-3 text-center justify-center">
+                  <Badge key={index} variant="outline" className="border-blue-300 text-blue-700 p-3 text-center justify-center hover:bg-blue-50 transition-colors">
                     {skill}
                   </Badge>
                 ))}
@@ -245,88 +245,88 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 bg-[#0A0A0A]">
+      <section id="services" className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-[#00AEEF]">Career Interests</h2>
-          <p className="text-xl leading-relaxed">
+          <h2 className="text-4xl font-bold mb-8 text-blue-600">Career Interests</h2>
+          <p className="text-xl leading-relaxed text-gray-600">
             Aspiring backend and cloud developer focused on building scalable infrastructures and backend systems. 
-            Open to opportunities in <span className="text-[#00AEEF] font-semibold">backend engineering</span>, 
-            <span className="text-[#00AEEF] font-semibold"> DevOps</span>, and 
-            <span className="text-[#00AEEF] font-semibold"> cloud architecture</span> roles.
+            Open to opportunities in <span className="text-blue-600 font-semibold">backend engineering</span>, 
+            <span className="text-blue-600 font-semibold"> DevOps</span>, and 
+            <span className="text-blue-600 font-semibold"> cloud architecture</span> roles.
           </p>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4">
+      <section id="contact" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-[#00AEEF]">Get in Touch</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-blue-600">Get in Touch</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-gray-800">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <Mail className="h-6 w-6 text-[#00AEEF]" />
-                  <a href="mailto:naveenveeramreddy181668@gmail.com" className="hover:text-[#00AEEF] transition-colors">
+                  <Mail className="h-6 w-6 text-blue-600" />
+                  <a href="mailto:naveenveeramreddy181668@gmail.com" className="hover:text-blue-600 transition-colors text-gray-600">
                     naveenveeramreddy181668@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Phone className="h-6 w-6 text-[#00AEEF]" />
-                  <span>+91 9347980893</span>
+                  <Phone className="h-6 w-6 text-blue-600" />
+                  <span className="text-gray-600">+91 9347980893</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Linkedin className="h-6 w-6 text-[#00AEEF]" />
-                  <a href="https://linkedin.com/in/naveen-veeramreddy" target="_blank" rel="noopener noreferrer" className="hover:text-[#00AEEF] transition-colors">
+                  <Linkedin className="h-6 w-6 text-blue-600" />
+                  <a href="https://linkedin.com/in/naveen-veeramreddy" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors text-gray-600">
                     linkedin.com/in/naveen-veeramreddy
                   </a>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Github className="h-6 w-6 text-[#00AEEF]" />
-                  <a href="https://github.com/Naveenveeramreddy" target="_blank" rel="noopener noreferrer" className="hover:text-[#00AEEF] transition-colors">
+                  <Github className="h-6 w-6 text-blue-600" />
+                  <a href="https://github.com/Naveenveeramreddy" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors text-gray-600">
                     github.com/Naveenveeramreddy
                   </a>
                 </div>
               </div>
             </div>
-            <Card className="bg-[#1A1A1A] border-[#333333]">
+            <Card className="bg-white border border-gray-200 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-[#00AEEF]">Send a Message</CardTitle>
+                <CardTitle className="text-blue-600">Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <Label htmlFor="name" className="text-[#E0E0E0]">Name</Label>
+                    <Label htmlFor="name" className="text-gray-700">Name</Label>
                     <Input
                       id="name"
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="bg-[#333333] border-[#555555] text-[#E0E0E0] focus:border-[#00AEEF]"
+                      className="bg-gray-50 border-gray-300 text-gray-800 focus:border-blue-500"
                       required
                     />
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-[#E0E0E0]">Email</Label>
+                    <Label htmlFor="email" className="text-gray-700">Email</Label>
                     <Input
                       id="email"
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="bg-[#333333] border-[#555555] text-[#E0E0E0] focus:border-[#00AEEF]"
+                      className="bg-gray-50 border-gray-300 text-gray-800 focus:border-blue-500"
                       required
                     />
                   </div>
                   <div>
-                    <Label htmlFor="message" className="text-[#E0E0E0]">Message</Label>
+                    <Label htmlFor="message" className="text-gray-700">Message</Label>
                     <textarea
                       id="message"
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      className="w-full h-32 p-3 bg-[#333333] border border-[#555555] rounded-md text-[#E0E0E0] focus:border-[#00AEEF] focus:outline-none resize-none"
+                      className="w-full h-32 p-3 bg-gray-50 border border-gray-300 rounded-md text-gray-800 focus:border-blue-500 focus:outline-none resize-none"
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-[#00AEEF] hover:bg-[#0080CC] text-white">
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
                     Send Message
                   </Button>
                 </form>
@@ -337,9 +337,9 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 bg-[#0A0A0A] border-t border-[#333333]">
+      <footer className="py-8 px-4 bg-gray-100 border-t border-gray-200">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-[#B0B0B0]">
+          <p className="text-gray-600">
             © 2024 Naveen Veeramreddy. Built with React & Tailwind CSS.
           </p>
         </div>
