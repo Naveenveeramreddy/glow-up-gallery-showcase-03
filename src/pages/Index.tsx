@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Cloud, Database, Server } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Cloud, Database, Server, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -44,12 +44,37 @@ const Index = () => {
     }
   ];
 
-  const skills = [
-    { name: "Python", icon: Code, level: 90 },
-    { name: "SQL", icon: Database, level: 85 },
-    { name: "AWS", icon: Cloud, level: 80 },
-    { name: "Linux", icon: Server, level: 75 },
-    { name: "Git", icon: Github, level: 85 }
+  const skillCategories = [
+    {
+      title: "Cloud Platform",
+      icon: Cloud,
+      skills: ["AWS"]
+    },
+    {
+      title: "Cloud Technologies",
+      icon: Server,
+      skills: ["EC2", "S3", "RDS", "Lambda", "CloudFront", "CloudWatch", "Route 53", "IAM", "Auto Scaling", "Load Balancer"]
+    },
+    {
+      title: "DevOps Tools",
+      icon: Code,
+      skills: ["Jenkins", "Terraform", "Docker", "Kubernetes", "Ansible", "Git", "GitHub"]
+    },
+    {
+      title: "Programming",
+      icon: Code,
+      skills: ["Python"]
+    },
+    {
+      title: "Operating Systems",
+      icon: Server,
+      skills: ["Linux", "Windows"]
+    },
+    {
+      title: "Security & Networking",
+      icon: Shield,
+      skills: ["VPC", "WAF", "Security Groups", "IAM"]
+    }
   ];
 
   return (
@@ -175,48 +200,44 @@ const Index = () => {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-[#00AEEF]">Skills & Tools</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Technical Skills</h3>
-              <div className="space-y-6">
-                {skills.map((skill, index) => (
-                  <div key={index} className="flex items-center gap-4">
-                    <skill.icon className="h-6 w-6 text-[#00AEEF]" />
-                    <div className="flex-1">
-                      <div className="flex justify-between mb-2">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-[#B0B0B0]">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-[#333333] rounded-full h-2">
-                        <div 
-                          className="bg-gradient-to-r from-[#00AEEF] to-[#0080CC] h-2 rounded-full transition-all duration-1000"
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                    </div>
+          <h2 className="text-4xl font-bold text-center mb-8 text-[#00AEEF]">Skills & Technologies</h2>
+          <p className="text-center text-lg text-[#B0B0B0] mb-16">My technical expertise</p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {skillCategories.map((category, index) => (
+              <Card key={index} className="bg-[#1A1A1A] border-[#333333] hover:border-[#00AEEF] transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-[#00AEEF] flex items-center gap-3">
+                    <category.icon className="h-6 w-6" />
+                    {category.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <Badge 
+                        key={skillIndex} 
+                        variant="outline" 
+                        className="border-[#00AEEF]/30 text-[#E0E0E0] hover:bg-[#00AEEF]/10 transition-colors"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Soft Skills</h3>
-              <div className="grid grid-cols-2 gap-4">
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-12">
+            <h3 className="text-2xl font-semibold mb-6 text-center">Soft Skills</h3>
+            <div className="flex justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl">
                 {["Teamwork", "Initiative", "Adaptability", "Willingness to Learn"].map((skill, index) => (
-                  <Badge key={index} variant="outline" className="border-[#00AEEF] text-[#00AEEF] p-3 text-center">
+                  <Badge key={index} variant="outline" className="border-[#00AEEF] text-[#00AEEF] p-3 text-center justify-center">
                     {skill}
                   </Badge>
                 ))}
-              </div>
-              <div className="mt-8">
-                <h4 className="text-xl font-semibold mb-4">Tools</h4>
-                <div className="flex flex-wrap gap-3">
-                  {["Linux", "Visual Studio Code", "Git"].map((tool, index) => (
-                    <Badge key={index} className="bg-[#00AEEF]/10 text-[#00AEEF] border-[#00AEEF]/20">
-                      {tool}
-                    </Badge>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
