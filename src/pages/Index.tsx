@@ -124,31 +124,35 @@ const Index = () => {
         <div className="container-professional">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              <div className="space-y-6">
+                <div className="text-center lg:text-left">
+                  <h1 className="heading-xl mb-2">
+                    <span className="professional-gradient">Naveen Veeramreddy</span>
+                  </h1>
+                  <h2 className="heading-lg text-muted-foreground mb-4">
+                    Cloud & DevOps Engineer
+                  </h2>
+                  <p className="text-professional max-w-lg mx-auto lg:mx-0">
+                    Self-motivated engineering student specializing in AWS cloud architecture, 
+                    infrastructure automation, and DevOps practices. I build scalable, secure, 
+                    and cost-effective cloud solutions.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
+                    <MapPin className="w-4 h-4 text-primary" />
                     <span>Remote • Available</span>
                   </div>
-                  <div className="w-1 h-1 bg-muted-foreground rounded-full" />
+                  <div className="w-1 h-1 bg-muted-foreground rounded-full self-center" />
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
+                    <Calendar className="w-4 h-4 text-primary" />
                     <span>5+ Years Experience</span>
                   </div>
                 </div>
-                
-                <h1 className="heading-xl">
-                  Cloud & DevOps{" "}
-                  <span className="professional-gradient">Engineer</span>
-                </h1>
-                
-                <p className="text-professional max-w-lg">
-                  Specialized in AWS cloud architecture, infrastructure automation, and DevOps practices. 
-                  I build scalable, secure, and cost-effective cloud solutions.
-                </p>
               </div>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3">
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -171,7 +175,7 @@ const Index = () => {
                 </Button>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center lg:justify-start gap-4">
                 <TooltipProvider>
                   {[
                     { icon: <Github className="w-5 h-5" />, label: "GitHub", href: "#" },
@@ -198,8 +202,8 @@ const Index = () => {
                 <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 glass-professional animate-gentle-float" />
                 <div className="absolute inset-4 rounded-xl bg-card professional-card flex items-center justify-center">
                   <Avatar className="w-40 h-40 animate-subtle-pulse">
-                    <AvatarImage src="/api/placeholder/400/400" alt="Profile" />
-                    <AvatarFallback className="text-4xl font-bold">CE</AvatarFallback>
+                    <AvatarImage src="/api/placeholder/400/400" alt="Naveen Veeramreddy" />
+                    <AvatarFallback className="text-4xl font-bold">NV</AvatarFallback>
                     <div className="status-indicator">
                       <div className="status-online" />
                     </div>
