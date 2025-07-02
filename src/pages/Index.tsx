@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Cloud, Database, Server, Shield } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Cloud, Database, Server, Shield, Sparkles, Brain, Zap } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -78,48 +77,205 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Enhanced Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-indigo-200/20"></div>
-        
-        <div className="text-center z-10 max-w-4xl mx-auto">
-          <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full mx-auto mb-8 flex items-center justify-center text-4xl font-bold text-white shadow-lg">
-            NV
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          {/* Neural Network Background */}
+          <div className="absolute inset-0 opacity-20">
+            <svg className="w-full h-full" viewBox="0 0 1000 1000">
+              <defs>
+                <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
+                  <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.6" />
+                  <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.4" />
+                </linearGradient>
+              </defs>
+              
+              {/* Animated Neural Network Lines */}
+              {Array.from({ length: 15 }).map((_, i) => (
+                <g key={i}>
+                  <line
+                    x1={Math.random() * 1000}
+                    y1={Math.random() * 1000}
+                    x2={Math.random() * 1000}
+                    y2={Math.random() * 1000}
+                    stroke="url(#neuralGradient)"
+                    strokeWidth="1"
+                    className="animate-pulse"
+                    style={{
+                      animationDelay: `${i * 0.2}s`,
+                      animationDuration: `${3 + Math.random() * 2}s`
+                    }}
+                  />
+                  <circle
+                    cx={Math.random() * 1000}
+                    cy={Math.random() * 1000}
+                    r="3"
+                    fill="url(#neuralGradient)"
+                    className="animate-ping"
+                    style={{
+                      animationDelay: `${i * 0.3}s`,
+                      animationDuration: `${2 + Math.random() * 1}s`
+                    }}
+                  />
+                </g>
+              ))}
+            </svg>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent">
-            Hi, I'm Naveen
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-600 font-medium">
-            Cloud & Backend Developer
-          </p>
-          <p className="text-lg mb-12 max-w-2xl mx-auto leading-relaxed text-gray-600">
-            Self-motivated engineering student passionate about building scalable, secure, and efficient cloud architectures
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+
+          {/* Floating Particles */}
+          <div className="absolute inset-0">
+            {Array.from({ length: 50 }).map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-blue-400 rounded-full animate-float"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 5}s`,
+                  animationDuration: `${5 + Math.random() * 10}s`
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Gradient Orbs */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
+        
+        <div className="text-center z-10 max-w-5xl mx-auto relative">
+          {/* AI-Inspired Avatar */}
+          <div className="relative mb-12">
+            <div className="w-40 h-40 mx-auto relative">
+              {/* Outer Ring with Rotation */}
+              <div className="absolute inset-0 rounded-full border-2 border-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 animate-spin-slow">
+                <div className="w-full h-full rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 backdrop-blur-sm" />
+              </div>
+              
+              {/* Middle Ring */}
+              <div className="absolute inset-2 rounded-full border border-blue-400/50 animate-pulse">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-slate-800/80 to-purple-900/80 backdrop-blur-md" />
+              </div>
+              
+              {/* Inner Avatar */}
+              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-4xl font-bold text-white shadow-2xl">
+                <div className="relative">
+                  NV
+                  <div className="absolute -top-1 -right-1">
+                    <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Floating Icons */}
+              <div className="absolute -top-2 -left-2 animate-bounce" style={{ animationDelay: '0s' }}>
+                <div className="w-8 h-8 bg-blue-500/80 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <Cloud className="w-4 h-4 text-white" />
+                </div>
+              </div>
+              <div className="absolute -top-2 -right-2 animate-bounce" style={{ animationDelay: '0.5s' }}>
+                <div className="w-8 h-8 bg-purple-500/80 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <Brain className="w-4 h-4 text-white" />
+                </div>
+              </div>
+              <div className="absolute -bottom-2 -left-2 animate-bounce" style={{ animationDelay: '1s' }}>
+                <div className="w-8 h-8 bg-cyan-500/80 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <Code className="w-4 h-4 text-white" />
+                </div>
+              </div>
+              <div className="absolute -bottom-2 -right-2 animate-bounce" style={{ animationDelay: '1.5s' }}>
+                <div className="w-8 h-8 bg-green-500/80 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <Zap className="w-4 h-4 text-white" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced Typography */}
+          <div className="space-y-6 mb-12">
+            <div className="relative">
+              <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+                Hi, I'm Naveen
+              </h1>
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 blur-xl -z-10 animate-pulse" />
+            </div>
+            
+            <div className="relative">
+              <p className="text-2xl md:text-3xl mb-6 text-gray-300 font-medium">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Cloud & Backend Developer
+                </span>
+                <span className="ml-2 inline-block animate-pulse">
+                  <Sparkles className="w-6 h-6 text-yellow-400" />
+                </span>
+              </p>
+            </div>
+            
+            <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-400 backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
+              Self-motivated engineering student passionate about building 
+              <span className="text-blue-400 font-semibold"> scalable</span>, 
+              <span className="text-purple-400 font-semibold"> secure</span>, and 
+              <span className="text-cyan-400 font-semibold"> efficient</span> cloud architectures
+            </p>
+          </div>
+
+          {/* Enhanced CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Button 
               size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group relative bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 text-lg shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 border-0"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              View My Projects
+              <span className="relative z-10 flex items-center gap-2">
+                View My Projects
+                <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg blur opacity-0 group-hover:opacity-50 transition-opacity" />
             </Button>
+            
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg transition-all duration-300"
+              className="group relative border-2 border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 hover:border-cyan-400 px-10 py-4 text-lg backdrop-blur-sm bg-white/5 transition-all duration-300 transform hover:scale-105"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Get in Touch
+              <span className="flex items-center gap-2">
+                Get in Touch
+                <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+              </span>
             </Button>
           </div>
-          <div className="flex justify-center gap-6">
-            <a href="https://github.com/Naveenveeramreddy" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
-              <Github size={32} />
+
+          {/* Enhanced Social Links */}
+          <div className="flex justify-center gap-8">
+            <a 
+              href="https://github.com/Naveenveeramreddy" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="group relative p-4 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-110"
+            >
+              <Github className="w-8 h-8 text-gray-400 group-hover:text-blue-400 transition-colors" />
+              <div className="absolute inset-0 bg-blue-400/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
-            <a href="https://linkedin.com/in/naveen-veeramreddy" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
-              <Linkedin size={32} />
+            <a 
+              href="https://linkedin.com/in/naveen-veeramreddy" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="group relative p-4 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-110"
+            >
+              <Linkedin className="w-8 h-8 text-gray-400 group-hover:text-blue-400 transition-colors" />
+              <div className="absolute inset-0 bg-blue-400/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-gray-400/50 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-gradient-to-b from-blue-400 to-purple-400 rounded-full mt-2 animate-pulse" />
+            </div>
           </div>
         </div>
       </section>
