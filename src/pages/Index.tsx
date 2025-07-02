@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Cloud, Database, Server, Shield, Zap, Users, Target, Award, TrendingUp, CheckCircle, ArrowRight, Menu, X, Settings, Monitor, Lock } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Download, ExternalLink, Code, Cloud, Database, Server, Shield, Zap, Users, Target, Award, TrendingUp, CheckCircle, ArrowRight, Menu, X, Settings, Monitor, Lock, MapPin, Calendar, Star } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -146,71 +146,168 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center tech-bg">
+      {/* Enhanced Hero Section */}
+      <section id="home" className="relative min-h-screen flex items-center justify-center tech-bg overflow-hidden">
+        {/* Enhanced Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
         
-        <div className="relative max-w-7xl mx-auto px-4 py-20 text-center">
+        {/* Floating Tech Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-float-gentle" />
+          <div className="absolute top-40 right-20 w-32 h-32 bg-accent/10 rounded-full blur-2xl animate-float-gentle" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-32 left-20 w-24 h-24 bg-primary/10 rounded-full blur-xl animate-float-gentle" style={{ animationDelay: '2s' }} />
+          <div className="absolute bottom-20 right-10 w-16 h-16 bg-accent/10 rounded-full blur-xl animate-float-gentle" style={{ animationDelay: '0.5s' }} />
+        </div>
+
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_24px,rgba(0,174,239,0.03)_25px,rgba(0,174,239,0.03)_26px,transparent_27px,transparent_99px,rgba(0,174,239,0.03)_100px),linear-gradient(transparent_24px,rgba(0,174,239,0.03)_25px,rgba(0,174,239,0.03)_26px,transparent_27px,transparent_99px,rgba(0,174,239,0.03)_100px)] bg-[length:100px_100px]" />
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 py-20 text-center z-10">
           <div className="animate-fade-in-up">
-            {/* Profile Photo Placeholder */}
-            <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-4xl font-bold text-white shadow-2xl animate-float-gentle">
-              NV
+            {/* Enhanced Profile Section */}
+            <div className="relative inline-block mb-12">
+              {/* Profile Photo with Enhanced Effects */}
+              <div className="relative">
+                <div className="w-40 h-40 mx-auto mb-6 bg-gradient-to-br from-primary via-accent to-primary/80 rounded-full flex items-center justify-center text-5xl font-bold text-white shadow-2xl animate-float-gentle hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 animate-pulse-glow" />
+                  <span className="relative z-10">NV</span>
+                </div>
+                
+                {/* Status Badge */}
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="flex items-center gap-2 bg-card/90 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-2 shadow-lg">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium text-foreground">Available for work</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Location & Experience Tags */}
+              <div className="flex flex-wrap justify-center gap-3 mb-8">
+                <div className="flex items-center gap-2 bg-card/60 backdrop-blur-sm border border-border/50 rounded-full px-4 py-2">
+                  <MapPin className="w-4 h-4 text-primary" />
+                  <span className="text-sm text-muted-foreground">India</span>
+                </div>
+                <div className="flex items-center gap-2 bg-card/60 backdrop-blur-sm border border-border/50 rounded-full px-4 py-2">
+                  <Calendar className="w-4 h-4 text-primary" />
+                  <span className="text-sm text-muted-foreground">3+ Years Experience</span>
+                </div>
+                <div className="flex items-center gap-2 bg-card/60 backdrop-blur-sm border border-border/50 rounded-full px-4 py-2">
+                  <Star className="w-4 h-4 text-primary" />
+                  <span className="text-sm text-muted-foreground">Cloud Specialist</span>
+                </div>
+              </div>
             </div>
 
-            <h1 className="heading-primary mb-6">
-              Hi, I'm <span className="gradient-text">Naveen</span>
-              <br />
-              <span className="text-2xl md:text-4xl lg:text-5xl font-normal text-muted-foreground">
-                Cloud & Backend Developer
-              </span>
-            </h1>
+            {/* Enhanced Title Section */}
+            <div className="relative mb-8">
+              <h1 className="heading-primary mb-6 leading-tight">
+                <span className="block text-2xl md:text-3xl lg:text-4xl font-normal text-muted-foreground mb-2">
+                  Hi, I'm
+                </span>
+                <span className="gradient-text block">Naveen Veeramreddy</span>
+                <span className="block text-2xl md:text-4xl lg:text-5xl font-normal text-muted-foreground mt-2">
+                  Cloud & <span className="text-primary">Backend</span> Developer
+                </span>
+              </h1>
 
-            <p className="text-body max-w-2xl mx-auto mb-12">
-              Self-motivated engineering student passionate about building scalable cloud infrastructures 
-              and backend systems. Ready to drive innovation in cloud architecture and DevOps.
-            </p>
+              {/* Animated Underline */}
+              <div className="flex justify-center mt-6">
+                <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse-glow" />
+              </div>
+            </div>
 
-            {/* Social Links */}
-            <div className="flex justify-center gap-6 mb-12">
+            {/* Enhanced Description */}
+            <div className="max-w-3xl mx-auto mb-12">
+              <p className="text-body text-xl leading-relaxed mb-6">
+                Self-motivated engineering student passionate about building 
+                <span className="text-primary font-semibold"> scalable cloud infrastructures</span> and 
+                <span className="text-primary font-semibold"> backend systems</span>. 
+                Ready to drive innovation in cloud architecture and DevOps.
+              </p>
+              
+              {/* Tech Stack Preview */}
+              <div className="flex flex-wrap justify-center gap-3 mb-8">
+                {["AWS", "Python", "Docker", "Kubernetes", "Terraform"].map((tech, index) => (
+                  <Badge 
+                    key={tech} 
+                    variant="outline" 
+                    className="border-primary/30 text-primary hover:bg-primary/10 transition-colors px-4 py-2 text-sm"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            {/* Enhanced Social Links */}
+            <div className="flex justify-center gap-4 mb-12">
               <a 
                 href="https://github.com/Naveenveeramreddy" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-14 h-14 bg-card hover:bg-primary/20 rounded-full flex items-center justify-center transition-all duration-300 hover-glow"
+                className="group relative w-16 h-16 bg-card/80 backdrop-blur-sm hover:bg-primary/20 rounded-2xl flex items-center justify-center transition-all duration-300 hover-glow border border-border/50 hover:border-primary/50 hover:scale-110"
               >
-                <Github className="w-6 h-6" />
+                <Github className="w-7 h-7 text-muted-foreground group-hover:text-primary transition-colors" />
+                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-card border border-border rounded-lg px-3 py-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  GitHub
+                </div>
               </a>
+              
               <a 
                 href="https://linkedin.com/in/naveen-veeramreddy" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-14 h-14 bg-card hover:bg-primary/20 rounded-full flex items-center justify-center transition-all duration-300 hover-glow"
+                className="group relative w-16 h-16 bg-card/80 backdrop-blur-sm hover:bg-blue-500/20 rounded-2xl flex items-center justify-center transition-all duration-300 hover-glow border border-border/50 hover:border-blue-500/50 hover:scale-110"
               >
-                <Linkedin className="w-6 h-6" />
+                <Linkedin className="w-7 h-7 text-muted-foreground group-hover:text-blue-400 transition-colors" />
+                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-card border border-border rounded-lg px-3 py-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  LinkedIn
+                </div>
               </a>
+              
               <a 
                 href="mailto:naveenveeramreddy181668@gmail.com"
-                className="w-14 h-14 bg-card hover:bg-primary/20 rounded-full flex items-center justify-center transition-all duration-300 hover-glow"
+                className="group relative w-16 h-16 bg-card/80 backdrop-blur-sm hover:bg-green-500/20 rounded-2xl flex items-center justify-center transition-all duration-300 hover-glow border border-border/50 hover:border-green-500/50 hover:scale-110"
               >
-                <Mail className="w-6 h-6" />
+                <Mail className="w-7 h-7 text-muted-foreground group-hover:text-green-400 transition-colors" />
+                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-card border border-border rounded-lg px-3 py-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  Email
+                </div>
               </a>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* Enhanced CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
                 onClick={() => scrollToSection('projects')}
-                className="btn-primary"
+                className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-primary hover:border-primary/80"
               >
-                View My Projects
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <span className="mr-3">View My Projects</span>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </div>
               </Button>
+              
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="btn-secondary"
+                className="group bg-transparent hover:bg-primary/10 text-foreground font-semibold px-10 py-4 rounded-2xl border-2 border-primary/50 hover:border-primary transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
               >
-                Get in Touch
+                <span className="mr-3">Get in Touch</span>
+                <div className="flex items-center">
+                  <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                </div>
               </Button>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+              <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
+              </div>
             </div>
           </div>
         </div>

@@ -53,7 +53,7 @@ All colors MUST be HSL.
   }
 }
 
-/* Professional animations and effects */
+/* Enhanced Professional animations and effects */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -103,6 +103,35 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
 /* Tech background animation */
 @keyframes tech-lines {
   0% {
@@ -144,7 +173,19 @@ All colors MUST be HSL.
   animation: tech-lines 20s linear infinite;
 }
 
-/* Professional hover effects */
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
+
+/* Enhanced Professional hover effects */
 .hover-lift {
   transition: all 0.3s ease;
 }
@@ -163,7 +204,7 @@ All colors MUST be HSL.
   border-color: rgba(0, 174, 239, 0.6);
 }
 
-/* Electric blue gradient text */
+/* Enhanced Electric blue gradient text */
 .gradient-text {
   background: linear-gradient(135deg, #00AEEF, #0099CC, #0077AA);
   background-size: 200% 200%;
@@ -173,7 +214,7 @@ All colors MUST be HSL.
   animation: gradient-shift 8s ease infinite;
 }
 
-/* Tech background elements */
+/* Enhanced Tech background elements */
 .tech-bg {
   position: relative;
   overflow: hidden;
@@ -301,4 +342,38 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Enhanced glassmorphism effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced modern hover effects */
+.modern-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 174, 239, 0.15);
+}
+
+/* Floating elements */
+.floating-element {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.floating-element:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.floating-element:nth-child(4) {
+  animation-delay: 3s;
 }
