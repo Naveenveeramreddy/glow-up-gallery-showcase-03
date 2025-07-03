@@ -46,6 +46,10 @@ const Index = () => {
     window.open('mailto:naveenveeramreddy181668@gmail.com', '_blank');
   };
 
+  const openCalendly = () => {
+    window.open('https://calendly.com/naveenveeramreddy181668', '_blank');
+  };
+
   const skills = [
     {
       category: "Cloud Platform",
@@ -398,7 +402,7 @@ const Index = () => {
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <Button variant="outline" size="lg" className="btn-professional-outline">
+              <Button variant="outline" size="lg" className="btn-professional-outline" onClick={openCalendly}>
                 <Calendar className="w-4 h-4 mr-2" />
                 Schedule a Call
               </Button>
