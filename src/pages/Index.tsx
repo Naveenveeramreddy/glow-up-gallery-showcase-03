@@ -148,10 +148,7 @@ const Index = () => {
                     <span>Remote • Available</span>
                   </div>
                   <div className="w-1 h-1 bg-muted-foreground rounded-full self-center" />
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-primary" />
-                    <span>5+ Years Experience</span>
-                  </div>
+                  
                 </div>
               </div>
 
