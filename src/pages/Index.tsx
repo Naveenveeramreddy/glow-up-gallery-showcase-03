@@ -27,11 +27,15 @@ import {
   BookOpen
 } from "lucide-react";
 
-const HeroSection = ({ openEmail, openResume, openGitHub, openLinkedIn }) => {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
+interface HeroSectionProps {
+  openEmail: () => void;
+  openResume: () => void;
+  openGitHub: () => void;
+  openLinkedIn: () => void;
+  scrollToSection: (id: string) => void;
+}
 
+const HeroSection = ({ openEmail, openResume, openGitHub, openLinkedIn, scrollToSection }: HeroSectionProps) => {
   return (
     <section className="relative section-professional overflow-hidden">
       <div className="container-professional">
