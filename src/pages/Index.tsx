@@ -34,6 +34,18 @@ const Index = () => {
     window.open('https://drive.google.com/file/d/1d5xs7mtzIqpD9PLOR4ujN0hrdmfI0pVS/view?usp=sharing', '_blank');
   };
 
+  const openGitHub = () => {
+    window.open('https://github.com/Naveenveeramreddy', '_blank');
+  };
+
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/naveen-veeramreddy', '_blank');
+  };
+
+  const openEmail = () => {
+    window.open('mailto:naveenveeramreddy181668@gmail.com', '_blank');
+  };
+
   const skills = [
     {
       category: "Cloud Platform",
@@ -156,7 +168,7 @@ const Index = () => {
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Button size="lg" className="btn-professional group">
+                      <Button size="lg" className="btn-professional group" onClick={openEmail}>
                         <Mail className="w-4 h-4 mr-2" />
                         Get In Touch
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -182,22 +194,38 @@ const Index = () => {
 
               <div className="flex items-center justify-center lg:justify-start gap-4">
                 <TooltipProvider>
-                  {[
-                    { icon: <Github className="w-5 h-5" />, label: "GitHub", href: "#" },
-                    { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", href: "#" },
-                    { icon: <Mail className="w-5 h-5" />, label: "Email", href: "mailto:" }
-                  ].map((social, index) => (
-                    <Tooltip key={index}>
-                      <TooltipTrigger asChild>
-                        <Button variant="ghost" size="icon" className="subtle-glow">
-                          {social.icon}
-                        </Button>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{social.label}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  ))}
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="ghost" size="icon" className="subtle-glow" onClick={openGitHub}>
+                        <Github className="w-5 h-5" />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>GitHub</p>
+                    </TooltipContent>
+                  </Tooltip>
+                  
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="ghost" size="icon" className="subtle-glow" onClick={openLinkedIn}>
+                        <Linkedin className="w-5 h-5" />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>LinkedIn</p>
+                    </TooltipContent>
+                  </Tooltip>
+                  
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="ghost" size="icon" className="subtle-glow" onClick={openEmail}>
+                        <Mail className="w-5 h-5" />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Email</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </TooltipProvider>
               </div>
             </div>
@@ -364,7 +392,7 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="btn-professional group">
+              <Button size="lg" className="btn-professional group" onClick={openEmail}>
                 <Mail className="w-4 h-4 mr-2" />
                 Start a Conversation
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -388,22 +416,38 @@ const Index = () => {
             </p>
             <div className="flex items-center gap-4">
               <TooltipProvider>
-                {[
-                  { icon: <Github className="w-4 h-4" />, label: "GitHub" },
-                  { icon: <Linkedin className="w-4 h-4" />, label: "LinkedIn" },
-                  { icon: <Mail className="w-4 h-4" />, label: "Email" }
-                ].map((social, index) => (
-                  <Tooltip key={index}>
-                    <TooltipTrigger asChild>
-                      <Button variant="ghost" size="icon" className="w-8 h-8 subtle-glow">
-                        {social.icon}
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>{social.label}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                ))}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="ghost" size="icon" className="w-8 h-8 subtle-glow" onClick={openGitHub}>
+                      <Github className="w-4 h-4" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>GitHub</p>
+                  </TooltipContent>
+                </Tooltip>
+                
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="ghost" size="icon" className="w-8 h-8 subtle-glow" onClick={openLinkedIn}>
+                      <Linkedin className="w-4 h-4" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>LinkedIn</p>
+                  </TooltipContent>
+                </Tooltip>
+                
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="ghost" size="icon" className="w-8 h-8 subtle-glow" onClick={openEmail}>
+                      <Mail className="w-4 h-4" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Email</p>
+                  </TooltipContent>
+                </Tooltip>
               </TooltipProvider>
             </div>
           </div>
