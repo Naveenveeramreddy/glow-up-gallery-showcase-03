@@ -460,7 +460,7 @@ const Index = () => {
     {
       role: "B.Tech Electronics and Communication",
       company: "Pragati Engineering College",
-      period: "2021 - 2025",
+      period: "2021 - Present",
       icon: <GraduationCap className="w-4 h-4" />,
       achievements: [
         "Current CGPA: 7.8/10.0 - Maintaining strong academic performance",
