@@ -458,6 +458,18 @@ const Index = () => {
 
   const experience = [
     {
+      role: "Cloud & DevOps Learning Journey",
+      company: "Self-Directed & Online Platforms",
+      period: "2022 - Present",
+      icon: <Code className="w-4 h-4" />,
+      achievements: [
+        "Completed comprehensive AWS cloud fundamentals and practical implementations",
+        "Built and deployed multiple real-world projects including Route 53 architecture",
+        "Mastered infrastructure automation using Terraform, Docker, and Kubernetes",
+        "Developed proficiency in Python programming and backend development"
+      ]
+    },
+    {
       role: "B.Tech Electronics and Communication",
       company: "Pragati Engineering College",
       period: "2021 - 2025",
@@ -491,18 +503,6 @@ const Index = () => {
         "Demonstrated excellence across all subjects with consistent performance",
         "Developed strong academic foundation and study discipline",
         "Active participation in school activities and leadership roles"
-      ]
-    },
-    {
-      role: "Cloud & DevOps Learning Journey",
-      company: "Self-Directed & Online Platforms",
-      period: "2022 - Present",
-      icon: <Code className="w-4 h-4" />,
-      achievements: [
-        "Completed comprehensive AWS cloud fundamentals and practical implementations",
-        "Built and deployed multiple real-world projects including Route 53 architecture",
-        "Mastered infrastructure automation using Terraform, Docker, and Kubernetes",
-        "Developed proficiency in Python programming and backend development"
       ]
     }
   ];
