@@ -22,7 +22,9 @@ import {
   Shield,
   Cloud,
   Settings,
-  Terminal
+  Terminal,
+  GraduationCap,
+  BookOpen
 } from "lucide-react";
 
 const Index = () => {
@@ -115,23 +117,39 @@ const Index = () => {
 
   const experience = [
     {
-      role: "Senior Cloud Engineer",
-      company: "Tech Solutions Inc.",
+      role: "Engineering Student & Cloud Enthusiast",
+      company: "Self-Directed Learning",
       period: "2022 - Present",
+      icon: <GraduationCap className="w-4 h-4" />,
       achievements: [
-        "Led cloud migration reducing infrastructure costs by 35%",
-        "Implemented automated CI/CD pipelines increasing deployment frequency by 300%",
-        "Designed disaster recovery solutions achieving 99.99% availability"
+        "Completed comprehensive AWS cloud fundamentals and DevOps courses",
+        "Built and deployed multiple cloud infrastructure projects using Terraform and Jenkins",
+        "Developed proficiency in containerization with Docker and Kubernetes orchestration",
+        "Mastered Linux system administration and shell scripting automation"
       ]
     },
     {
-      role: "DevOps Engineer",
-      company: "Innovation Labs",
-      period: "2020 - 2022", 
+      role: "Personal Project Development",
+      company: "GitHub Portfolio",
+      period: "2023 - Present",
+      icon: <Code className="w-4 h-4" />,
       achievements: [
-        "Built containerized applications using Docker and Kubernetes",
-        "Automated infrastructure provisioning with Terraform",
-        "Established monitoring and alerting systems with CloudWatch"
+        "Created automated AWS infrastructure deployment pipelines",
+        "Implemented security best practices with IAM policies and VPC configurations",
+        "Developed monitoring solutions using CloudWatch and automated alerting systems",
+        "Contributed to open-source DevOps tools and documentation"
+      ]
+    },
+    {
+      role: "Continuous Learning & Certification",
+      company: "Online Platforms & Courses",
+      period: "2022 - Present", 
+      icon: <BookOpen className="w-4 h-4" />,
+      achievements: [
+        "Pursuing AWS cloud practitioner and solutions architect certifications",
+        "Completed hands-on labs for Docker, Kubernetes, and CI/CD implementations",
+        "Active participant in cloud computing communities and technical forums",
+        "Regular practice with real-world scenarios through personal lab environment"
       ]
     }
   ];
@@ -149,12 +167,12 @@ const Index = () => {
                     <span className="professional-gradient">Naveen Veeramreddy</span>
                   </h1>
                   <h2 className="heading-lg text-muted-foreground mb-6">
-                    Cloud & DevOps Engineer
+                    Aspiring Cloud & DevOps Engineer
                   </h2>
                   <p className="text-professional max-w-lg mx-auto lg:mx-0">
-                    Self-motivated engineering student specializing in AWS cloud architecture, 
-                    infrastructure automation, and DevOps practices. I build scalable, secure, 
-                    and cost-effective cloud solutions.
+                    Passionate engineering student specializing in AWS cloud architecture, 
+                    infrastructure automation, and DevOps practices. Eager to apply my technical 
+                    skills and fresh perspective to build scalable, secure cloud solutions.
                   </p>
                 </div>
 
@@ -350,9 +368,9 @@ const Index = () => {
       <section className="section-professional bg-card/30">
         <div className="container-professional">
           <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4">Professional Experience</h2>
+            <h2 className="heading-lg mb-4">Learning Journey & Development</h2>
             <p className="text-professional max-w-2xl mx-auto">
-              Track record of delivering complex cloud solutions and leading technical initiatives
+              My path to becoming a cloud engineer through continuous learning, hands-on projects, and skill development
             </p>
           </div>
 
@@ -361,9 +379,14 @@ const Index = () => {
               <Card key={index} className="professional-card border-0 bg-card/50">
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                    <div>
-                      <h3 className="heading-md text-xl mb-1">{exp.role}</h3>
-                      <p className="text-primary font-medium">{exp.company}</p>
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 rounded-lg bg-primary/10">
+                        {exp.icon}
+                      </div>
+                      <div>
+                        <h3 className="heading-md text-xl mb-1">{exp.role}</h3>
+                        <p className="text-primary font-medium">{exp.company}</p>
+                      </div>
                     </div>
                     <Badge variant="outline" className="mt-2 md:mt-0">
                       {exp.period}
@@ -389,10 +412,10 @@ const Index = () => {
       <section className="section-professional">
         <div className="container-professional">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="heading-lg mb-6">Let's Build Something Great</h2>
+            <h2 className="heading-lg mb-6">Ready to Start My Career</h2>
             <p className="text-professional mb-8">
-              Ready to discuss your next cloud project? I'm here to help you build scalable, 
-              secure, and efficient solutions.
+              I'm actively seeking entry-level opportunities in cloud engineering and DevOps. 
+              Let's discuss how my fresh perspective and technical skills can contribute to your team.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
